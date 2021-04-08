@@ -46,9 +46,9 @@ const AddFood = () => {
             </div>
             <div className="col-md-9">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input name="name" defaultValue="Product Name" ref={register} />
+                    <input name="name" placeholder="Product Name" ref={register} />
                     <br/>
-                    <input name="price" defaultValue="Product Price" ref={register} />
+                    <input name="price" placeholder="Product Price" ref={register} />
                     <br/>
                     <input name="exampleRequired" type="file" onChange={handleImageUpload} />
                     <br/>
