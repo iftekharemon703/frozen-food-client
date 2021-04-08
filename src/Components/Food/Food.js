@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Food.css';
 
 const Food = (props) => {
     const { name, price, imageURL, _id} = props.food;
     return (
-        <div className="container">
-            <div class="col-md-3 col-sm-12 mt-5">
-                <div class="p-4 border bg-light text-center">
-                    <img src={imageURL} alt=""/>
-                    <h4>{name}</h4>
-                    <h5>{price}</h5>
-                    <Link to={'/check-out/'+_id}>
-                        <button className="btn btn-success">Buy Now</button>
-                    </Link>
-                </div>
+    <div className="card product-card">
+        <div className="card-img-box">
+            <img src={imageURL} className="card-img-top" alt="..." />
+        </div>
+        <div className="card-body">
+            <h5 className="card-title mb-4">{name}</h5>
+            <div className="d-flex">
+                <h4 className="card-text text-success">{price}</h4>
+                <Link to={'/check-out/'+_id} className="btn btn-success">Buy Now</Link>
             </div>
         </div>
+    </div>
     );
 };
 

@@ -7,7 +7,7 @@ const CheckOut = () => {
     const [food , setFood] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/food/${id}`)
+        fetch(`https://boiling-cliffs-53901.herokuapp.com/food/${id}`)
         .then(res => res.json())
         .then(data => setFood(data))
     },[id])

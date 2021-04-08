@@ -13,7 +13,7 @@ const AddFood = () => {
             price: data.price,
             imageURL: imageURL
         }
-        const url = `http://localhost:5000/addFood`;
+        const url = `https://boiling-cliffs-53901.herokuapp.com/addFood`;
         fetch(url , {
             method: 'POST',
             headers: {
